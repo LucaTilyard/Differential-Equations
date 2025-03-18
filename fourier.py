@@ -7,7 +7,7 @@ x,n = sym.symbols('x, n')
 fps = 60
 
 #Define function to fourier approximate
-f = sym.Piecewise((1/2*x + 1/2, (x<0)), (-1/2*x + 1/2, (x>=0)))
+f = sym.Piecewise((x**2, (x<0)), (x**2, (x>=0)))
 
 #calculate fourier coefficients
 a0 = sym.integrate(f, (x,-1,1))
